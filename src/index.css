@@ -776,6 +776,8 @@ body,
   align-items: flex-start;
   text-align: left;
   line-height: 1.15;
+  min-width: 0;
+  overflow: hidden;
 }
 
 .music-btn-status {
@@ -784,6 +786,10 @@ body,
   font-weight: 600;
   letter-spacing: 0.1em;
   color: #fda4af;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%;
 }
 
 .music-btn-song {
@@ -1801,35 +1807,27 @@ body,
     padding: 10px 12px 12px;
   }
 
-  /* Compact, non-wrapping Top Bar on Mobile */
+  /* Compact, non-wrapping Top Bar on Mobile: Icon only on Left, Compact Music Player on Right */
   .hero-topbar {
     gap: 8px;
   }
 
   .brand-cluster {
-    padding: 6px 11px;
-    gap: 8px;
+    padding: 7px 13px;
+    gap: 0;
     flex-shrink: 0;
   }
 
   .xo-emblem {
-    font-size: 14px;
+    font-size: 15px;
   }
 
   .xo-heart {
-    font-size: 12px;
+    font-size: 13px;
   }
 
-  .brand-divider {
-    height: 14px;
-  }
-
-  .brand-eyebrow {
-    font-size: 8.5px;
-    letter-spacing: 0.1em;
-    white-space: nowrap;
-  }
-
+  .brand-divider,
+  .brand-titles,
   .brand-name,
   .control-pill-group,
   .xo-bg-photo-collage {
@@ -1844,19 +1842,19 @@ body,
 
   .music-control-cluster {
     max-width: 100%;
-    padding: 2px 4px;
-    gap: 2px;
+    padding: 3px 5px;
+    gap: 4px;
   }
 
   .track-nav-btn {
-    width: 24px;
-    height: 24px;
+    width: 26px;
+    height: 26px;
     flex-shrink: 0;
   }
 
   .music-toggle-btn {
-    padding: 4px 7px 4px 5px;
-    gap: 6px;
+    padding: 4px 8px 4px 5px;
+    gap: 7px;
     min-width: 0;
   }
 
@@ -1867,13 +1865,13 @@ body,
 
   .music-btn-status {
     font-size: 7px;
-    letter-spacing: 0.06em;
+    letter-spacing: 0.08em;
     white-space: nowrap;
   }
 
   .music-btn-song {
-    font-size: 10.5px;
-    max-width: 96px;
+    font-size: 11px;
+    max-width: 115px;
   }
 
   /* Scale Background Monument cleanly inside Mobile Viewport */
